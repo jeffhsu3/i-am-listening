@@ -4,9 +4,19 @@ verify_ssl = true
 name = "pypi"
 
 [[source]]
+url = "https://pypi.ngc.nvidia.com"
+verify_ssl = true
+name = "nvidia"
+
+[[source]]
 url = "https://download.pytorch.org/whl/cu121"
 verify_ssl = true
-name = "pytorch"
+name = "pytorch_cu121"
+
+[[source]]
+url = "https://download.pytorch.org/whl/cpu/"
+verify_ssl = true
+name = "pytorch_cpu"
 
 [packages]
 speechrecognition = "*"
@@ -14,12 +24,13 @@ pyaudio = "*"
 "pyannote.audio" = "*"
 python-dotenv = "*"
 numpy = "*"
-torch = {version = "*", index = "pytorch"}
-torchvision = {version = "*", index = "pytorch"}
-torchaudio = {version = "*", index = "pytorch"}
 openai-whisper = "*"
+transformers = "*"
+torch = {version = "*", index = "pytorch_cu121"}
+torchvision = {version = "*", index = "pytorch_cu121"}
+torchaudio = {version = "*", index = "pytorch_cu121"}
+huggingface-hub = ">=0.19.4"
 
 [dev-packages]
-
-[requires]
-python_version = "3.11"
+# [requires]
+# python_version = "3.10.5"

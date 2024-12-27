@@ -1,3 +1,6 @@
 .env
+*.db
 .aider*
-*log.txt
+*.log.txt
+
+__pycache__
