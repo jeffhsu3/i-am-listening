@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "i-am-listening"
+version = "0.1.0"
+description = "Voice detection and transcription"
+authors = ["Joe Hsu <jhsu.x1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "listening"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+PyAudio = "^0.2.14"
+SpeechRecognition = "^3.10.1"
+"pyannote.audio" = "^3.1.1"
+python-dotenv = "^1.0.0"
+numpy = "^1.26.2"
+torch = "^2.1.2"
+
+[tool.poetry.group.dev.dependencies]
+torchvision = "^0.16.1"
+torchaudio = "^2.1.2"
+openai-whisper = "^20231117"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

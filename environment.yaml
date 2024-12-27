@@ -1,0 +1,21 @@
+name: iamlistening
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python==3.10
+  - pip
+  - PyAudio
+  - pytorch
+  - pytorch-cuda
+  - SpeechRecognition
+  - python-dotenv
+  - numpy
+  - torchvision
+  - torchaudio
+  - pip:
+    - openai-whisper
+
+
+
